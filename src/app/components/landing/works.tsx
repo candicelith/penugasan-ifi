@@ -1,7 +1,7 @@
 export default function Works() {
   return (
     <section className="bg-black py-20 text-white">
-      <div className="container mx-auto px-5 md:px-0">
+      <div className="container mx-auto px-5 md:px-4 lg:px-8">
         <div className="mb-16">
           <h2 className="text-4xl md:text-[40px] font-extrabold text-white mb-4 tracking-tight">
             WORKS

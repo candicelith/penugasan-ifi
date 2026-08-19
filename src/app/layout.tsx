@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "./components/layout/navbar";
 import "./globals.css";
+import Footer from "./components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -14,10 +15,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <body>
+      <body className="bg-black">
         <Navbar />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }
