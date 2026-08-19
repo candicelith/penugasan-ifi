@@ -1,3 +1,24 @@
+"use client";
+
+const works = [
+  {
+    title: "Taman Mini Indonesia Indah",
+    image: "/landing/works/tmii.webp",
+  },
+  {
+    title: "MRT Jakarta",
+    image: "/landing/works/mrt.webp",
+  },
+  {
+    title: "YK Explore",
+    image: "/landing/works/ykexplore.webp",
+  },
+  {
+    title: "Locate App",
+    image: "/landing/works/locate.webp",
+  },
+];
+
 export default function Works() {
   return (
     <section className="bg-black py-20 text-white">
@@ -8,59 +29,23 @@ export default function Works() {
             <span className="text-[#FFC700]">.</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-            <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-200">
-              <img
-                src="/landing/works/tmii.webp"
-                alt="Taman Mini Indonesia Indah"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-500 group-hover:scale-105 absolute h-full w-full inset-0 bg-transparent"
-                sizes="100vw"
-              />
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {works.map((work) => (
+            <div
+              key={work.title}
+              className="group relative block overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-xl"
+            >
+              <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-200">
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
             </div>
-          </div>
-          <div className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-            <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-200">
-              <img
-                src="/landing/works/mrt.webp"
-                alt="MRT Jakarta"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-500 group-hover:scale-105 absolute h-full w-full inset-0 bg-transparent"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-          <div className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-            <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-200">
-              <img
-                src="/landing/works/ykexplore.webp"
-                alt="YK Explore"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-500 group-hover:scale-105 absolute h-full w-full inset-0 bg-transparent"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-          <div className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-            <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-200">
-              <img
-                src="/landing/works/locate.webp"
-                alt="Locate App"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-500 group-hover:scale-105 absolute h-full w-full inset-0 bg-transparent"
-                sizes="100vw"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
