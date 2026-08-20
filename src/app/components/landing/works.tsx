@@ -23,12 +23,14 @@ export default function Works() {
   return (
     <section className="bg-black py-20 text-white">
       <div className="container mx-auto px-5 md:px-4 lg:px-8">
+        {/* TITLE */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-[40px] font-extrabold text-white mb-4 tracking-tight">
             WORKS
             <span className="text-[#FFC700]">.</span>
           </h2>
         </div>
+        {/* WORKS CARD SECTION */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.map((work) => (
             <div

@@ -12,7 +12,7 @@ function SolutionOrbit({
 }) {
   return (
     <div className="relative flex h-[450px] w-[450px] items-center justify-center 2xl:h-[600px] 2xl:w-[600px]">
-      {/* Orbit */}
+      {/* ORBIT */}
       <div className="absolute h-[800px] w-[800px] shrink-0 scale-[0.6] 2xl:scale-[0.8]">
         <div className="absolute inset-0 animate-spin-orbit">
           {items.map((item) => (
@@ -20,7 +20,7 @@ function SolutionOrbit({
               key={item.title}
               className={`absolute ${item.position} -translate-x-1/2 -translate-y-1/2`}
             >
-              {/* Counter rotation */}
+              {/* COUNTER ROTATION */}
               <div className="animate-spin-upright">
                 <div className="flex h-[100px] w-[280px] items-center justify-center">
                   <div className="flex items-center gap-4">
@@ -36,7 +36,7 @@ function SolutionOrbit({
           ))}
         </div>
 
-        {/* Center */}
+        {/* CENTER TITLE */}
         <div className="absolute left-1/2 top-1/2 z-10 flex h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40">
           <h2 className="text-center text-3xl font-bold leading-snug text-white md:text-4xl">
             {title}
@@ -96,14 +96,14 @@ const talentOrbitItems: OrbitItem[] = [
 export default function Solutions() {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black font-sans">
-      {/* Heading */}
+      {/* HEADING */}
       <div className="absolute top-10 z-30 flex w-full justify-center pt-8">
         <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-[40px]">
           SOLUTIONS<span className="text-[#FFC700]">.</span>
         </h2>
       </div>
 
-      {/* Desktop */}
+      {/* DESKTOP ORBIT */}
       <div className="container mx-auto flex min-h-screen w-full flex-col items-center justify-center px-5 pt-32 pb-20 xl:flex-row xl:gap-0">
         {/* TECH SOLUTION */}
         <div className="hidden w-full justify-center xl:flex xl:w-1/2">
@@ -137,9 +137,9 @@ export default function Solutions() {
           />
         </div>
 
-        {/* Mobile */}
+        {/* MOBILE CARD */}
         <div className="flex w-full flex-col gap-6 xl:hidden">
-          {/* Tech */}
+          {/* TECH SOLUTION */}
           <div className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-6">
             <h2 className="mb-6 border-b border-white/20 pb-4 text-center text-2xl font-bold text-white">
               All-In-One Tech Solution
@@ -158,7 +158,7 @@ export default function Solutions() {
             </ul>
           </div>
 
-          {/* Talent */}
+          {/* TALENT SOLUTION */}
           <div className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-6">
             <h2 className="mb-6 border-b border-white/20 pb-4 text-center text-2xl font-bold text-white">
               Talent Solution Services

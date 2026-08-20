@@ -48,6 +48,7 @@ export function TypingText() {
 export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-150 overflow-hidden">
+      {/* BACKGROUND */}
       <video
         autoPlay
         loop
@@ -59,6 +60,7 @@ export default function Hero() {
       </video>
       <div className="absolute inset-0 bg-black/60 z-10" />
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent z-0 pointer-events-none" />
+      {/* HERO CONTENT */}
       <div className="container mx-auto relative z-20 h-full flex flex-col justify-between px-2 md:px-4 lg:px-8 pt-30 pb-20 md:pt-60 md:pb-40">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left gap-6">
           <h1 className="text-5xl md:text-[70px] font-bold text-white tracking-tight">

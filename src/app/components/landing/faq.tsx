@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/app/components/ui/accordion";
 
 const faqItems = [
   {
@@ -33,7 +33,7 @@ export default function Faq() {
     <section className="bg-[#080808] py-20 md:py-24">
       <div className="container mx-auto px-5 md:px-4 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* LEFT - TITLE */}
+          {/* TITLE */}
           <div className="lg:col-span-4 lg:pt-1">
             <h2 className="mb-6 text-3xl font-bold tracking-tight text-white md:text-[40px]">
               FAQ
@@ -46,7 +46,7 @@ export default function Faq() {
             </p>
           </div>
 
-          {/* RIGHT - ACCORDION */}
+          {/* ACCORDION */}
           <div className="lg:col-span-8">
             <Accordion className="flex flex-col gap-4">
               {faqItems.map((item, index) => (

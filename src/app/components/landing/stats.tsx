@@ -2,12 +2,14 @@ export default function Stats() {
   return (
     <section className="bg-black text-white py-20">
       <div className="container mx-auto px-5 md:px-4 lg:px-8">
+        {/* TITLE */}
         <div className="flex items-center gap-3 mb-8">
           <h2 className="text-4xl md:text-[40px] font-extrabold text-white mb-4 tracking-tight">
             Statistics
             <span className="text-[#FFC700]">.</span>
           </h2>
         </div>
+        {/* STATS CARD SECTION */}
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-30">
           <div className="flex flex-col">
             <h3 className="text-[30px] md:text[40px] lg:text-5xl font-bold mb-3">
@@ -50,6 +52,7 @@ export default function Stats() {
             </p>
           </div>
         </div>
+        {/* TEXT */}
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_2fr] gap-10">
           <div className="space-y-6 text-gray-300 text-base leading-relaxed order-1">
             <p className="text-justify">
@@ -90,6 +93,7 @@ export default function Stats() {
             <div className="absolute bottom-0 left-0 w-full h-1/3 bg-linear-to-t from-black to-transparent pointer-events-none"></div>
           </div>
         </div>
+        {/* PARTNER LOGOS */}
         <div className="mt-10 md:mt-0">
           <h2 className="text-white text-center text-base font-bold mb-12">
             Our Partner

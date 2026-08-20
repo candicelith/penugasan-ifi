@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "./components/layout/footer";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export default function RootLayout({
   children,
@@ -14,7 +14,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "scroll-smooth", "antialiased", "font-sans", inter.variable)}
+      className={cn(
+        "h-full",
+        "scroll-smooth",
+        "antialiased",
+        "font-sans",
+        inter.variable,
+      )}
     >
       <body className="bg-black">
         <Navbar />

@@ -21,6 +21,7 @@ const partners = [
   },
 ];
 
+// CLIENT PILL COMPONENT
 function ClientPill({ name, image }: { name: string; image: string }) {
   return (
     <div className="group flex h-14 w-44 shrink-0 items-center justify-center rounded-full bg-[#E5E5E5] md:h-16 md:w-56 cursor-pointer">
@@ -36,6 +37,7 @@ function ClientPill({ name, image }: { name: string; image: string }) {
   );
 }
 
+// MARQUEE FOR MOTION
 function ClientMarquee({ direction }: { direction: "left" | "right" }) {
   return (
     <Marquee
@@ -63,13 +65,14 @@ export default function Partners() {
   return (
     <section className="relative overflow-hidden bg-black px-5 py-20 md:px-0">
       <div className="container relative mx-auto">
+        {/* TITLE */}
         <div className="mb-12 md:mb-16">
           <h2 className="px-0 text-4xl font-extrabold tracking-tight text-white md:px-4 md:text-[40px] lg:px-8">
             Our Partner & Clients
             <span className="text-[#FFC700]">.</span>
           </h2>
         </div>
-
+        {/* CLIENT ANIMATION SECTION */}
         <div className="relative z-10 flex w-full flex-col gap-4 overflow-hidden md:gap-6">
           <ClientMarquee direction="left" />
 

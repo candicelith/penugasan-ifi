@@ -9,6 +9,7 @@ import Faq from "./components/landing/faq";
 export default function Home() {
   return (
     <main>
+      
       <Hero />
       <Stats />
       <Works />
