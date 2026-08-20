@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function ContactPage() {
   return (
     <main>
       <section className="flex min-h-screen justify-center bg-[#0a0a0a] px-6 py-30 text-white antialiased md:px-12 md:py-50 lg:px-24">
