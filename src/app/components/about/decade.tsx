@@ -1,4 +1,4 @@
-export default function decade() {
+export default function Decade() {
   return (
     <section className="relative w-full flex items-center overflow-hidden bg-black py-20 md:py-40">
       <video
@@ -13,7 +13,7 @@ export default function decade() {
       <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/20 z-1 pointer-events-none"></div>
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent z-0 pointer-events-none"></div>
       <div className="absolute inset-0 bg-linear-to-b from-black via-black/10 to-transparent z-0 pointer-events-none"></div>
-      <div className="container relative z-10 mx-auto px-5 md:px-0 w-full">
+      <div className="container relative z-10 mx-auto px-5 md:px-4 lg:px-8 w-full">
         <div className="max-w-2xl">
           <div className="relative w-full max-w-75 md:max-w-112.5 h-24 md:h-36 mb-6">
             <img

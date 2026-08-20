@@ -1,4 +1,4 @@
-export default function service1() {
+export default function Service1() {
   return (
     <section className="w-full bg-black text-white py-24 antialiased">
       <div className="container mx-auto px-5 md:px-4 lg:px-8">

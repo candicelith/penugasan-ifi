@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -7,10 +9,12 @@ const navLinks = [
   { name: "Services", href: "/services" },
   { name: "Industries", href: "/industries" },
   { name: "Community", href: "/community" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -39,7 +43,7 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 z-1000 h-18 w-full transition-all duration-300 md:px-4 lg:px-8 ${
+        className={`fixed top-0 z-[1000] h-18 w-full transition-all duration-300 md:px-4 lg:px-8 ${
           isScrolled
             ? "border-b border-white/10 bg-black/50 backdrop-blur-xl"
             : "bg-transparent"
@@ -47,7 +51,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto flex h-full items-center justify-between px-4 text-white md:px-0">
           {/* Logo */}
-          <a href="/" className="text-xl font-bold">
+          <Link href="/" className="text-xl font-bold">
             <img
               src="/logo.webp"
               alt="Coding Collective Logo"
@@ -55,23 +59,31 @@ export default function Navbar() {
               height="68"
               className="h-12 w-auto object-contain md:h-17"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden space-x-20 md:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-white transition-colors duration-300 hover:text-[#FFC700]"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`transition-colors duration-300 ${
+                    isActive
+                      ? "font-bold text-[#FFC700]"
+                      : "text-white hover:text-[#FFC700]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="relative z-2000 flex items-center md:hidden">
+          <div className="relative z-[2000] flex items-center md:hidden">
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
@@ -80,7 +92,6 @@ export default function Navbar() {
               className="text-white transition-colors hover:text-[#FFC700]"
             >
               {isOpen ? (
-                // X icon
                 <svg
                   className="h-7 w-7"
                   fill="none"
@@ -95,7 +106,6 @@ export default function Navbar() {
                   />
                 </svg>
               ) : (
-                // Hamburger icon
                 <svg
                   className="h-7 w-7"
                   fill="none"
@@ -127,21 +137,29 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed right-0 top-0 z-999 flex h-full w-64 flex-col bg-[#232323] px-8 pt-24 shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed right-0 top-0 z-[999] flex h-full w-64 flex-col bg-[#232323] px-8 pt-24 shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex flex-col gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-lg text-white transition-colors duration-300 hover:text-[#FFC700]"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg transition-colors duration-300 ${
+                  isActive
+                    ? "font-bold text-[#FFC700]"
+                    : "text-white hover:text-[#FFC700]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>

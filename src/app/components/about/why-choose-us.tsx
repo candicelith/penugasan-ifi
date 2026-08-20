@@ -1,4 +1,4 @@
-export default function chooseUs() {
+export default function ChooseUs() {
   return (
     <section className="bg-black py-20">
       <div className="container mx-auto px-5 md:px-0">
