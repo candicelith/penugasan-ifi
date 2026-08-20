@@ -1,3 +1,6 @@
+import Service1 from "../components/services/service-1";
+import Service2 from "../components/services/service-2";
+
 export default function Services() {
   return (
     <main>
@@ -27,6 +30,9 @@ export default function Services() {
           </p>
         </div>
       </section>
+
+      <Service1 />
+      <Service2 />
     </main>
   );
 }
